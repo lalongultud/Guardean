@@ -13,23 +13,23 @@ Este proyecto utiliza una Raspberry Pi para recibir datos de sensores conectados
     Actualización del Sistema:
 
     Abre una terminal y actualiza el sistema:
-  
+  ----
       bash
       sudo apt update
       sudo apt upgrade
 
-    Habilitación de la Interfaz Serial:
+Habilitación de la Interfaz Serial:
 
-    Abre la configuración de Raspberry Pi:
+Abre la configuración de Raspberry Pi:
 
       bash
       sudo raspi-config
 
-     Navega a Interfacing Options > Serial.
+Navega a Interfacing Options > Serial.
     Habilita la interfaz serial y desactiva la consola serial.
     Instalación de Dependencias:
 
-    Instala Python y herramientas necesarias:
+Instala Python y herramientas necesarias:
 
       bash
       sudo apt install python3 python3-pip python3-venv
@@ -40,16 +40,16 @@ Este proyecto utiliza una Raspberry Pi para recibir datos de sensores conectados
 
     Crea y activa un entorno virtual para tu proyecto:
 
-      bash
-      python3 -m venv myenv
-      source myenv/bin/activate
+       bash
+       python3 -m venv myenv
+       source myenv/bin/activate
 
     Instalación de Paquetes Python:
 
     Instala Flask y pyserial:
 
-      bash
-      pip install Flask pyserial
+       bash
+       pip install Flask pyserial
 
 
 5. Conexión y Configuración del Arduino
@@ -101,6 +101,7 @@ Este proyecto utiliza una Raspberry Pi para recibir datos de sensores conectados
     Creación del Servidor Flask:
 
     Crea un archivo llamado web-viewer.py en tu proyecto:
+
         python
         from flask import Flask, jsonify
         import serial
@@ -154,14 +155,8 @@ Este proyecto utiliza una Raspberry Pi para recibir datos de sensores conectados
     Accede a la página web desde un navegador usando la dirección IP de la Raspberry Pi, por ejemplo: http://<IP_DE_TU_RASPBERRY_PI>:5000/data
 
 
-7. Monitoreo y Mantenimiento
-    Verificación de Conexiones:
 
-    Asegúrate de que el Arduino esté correctamente conectado y que la Raspberry Pi pueda leer los datos.
-    Solución de Problemas Comunes:
-
-    Verifica el puerto serial y el formato de los datos si no ves la información esperada.
-    Seguridad:
+--
 
     Este proyecto fue realizado en el marco del curso IoT Essentials Developer impartido por 
     [Codigo IoT ](https://www.codigoiot.com/) y organizado por la 
